@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #121212; /* Sleek dark background */
+  color: #e1e1e1; /* Light text for readability */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(18, 18, 18, 0.9); /* Transparent, sleek header */
+  padding: 15px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: rgba(18, 18, 18, 0.95); /* Slightly darker on hover */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #e1e1e1;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #1f1f1f; /* Sleek hover effect */
+  color: #fff;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle depth */
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Smooth image scaling */
+  border-radius: 20px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e1e1e1;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(5px); /* Frosted glass */
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1); /* Subtle hover effect */
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Animation for fade effect */
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Services Section */
+.services {
+  background-color: #1f1f1f;
+  color: #e1e1e1;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #3a86ff; /* Futuristic accent color */
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #121212;
+  color: #e1e1e1;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer a {
+  color: #3a86ff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #1f77d0;
+}

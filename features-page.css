@@ -1,0 +1,192 @@
+/* Features Page */
+.features-page {
+  background-color: #000000;
+  color: #e1e1e1;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.features-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+/* Feature boxes container */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Individual feature boxes */
+.feature-box {
+  position: relative;
+  background-color: #1a1a1a;
+  height: auto;
+  min-height: 350px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 25px 50px rgba(0, 229, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box img {
+  flex-shrink: 0;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.feature-box h2, .feature-box p {
+  padding: 20px;
+}
+
+
+.feature-box p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #cccccc;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Styling for hover effect */
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 25px 70px rgba(0, 229, 255, 0.4);
+}
+
+.feature-box:hover img {
+  transform: scale(1.1);
+}
+
+.feature-box:hover h2 {
+  color: #3a86ff;
+}
+
+.feature-box:hover p {
+  color: #e1e1e1;
+}
+
+/* Navbar Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 15px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #3a86ff;
+}
+
+/* Navbar Page Picker */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e1e1e1;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Service Cards */
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; 
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 25px 70px rgba(0, 229, 255, 0.3);
+}
+
+.feature-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+p {
+  color: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+      width: 100px;
+  }
+  .service-cards {
+      flex-direction: column;
+  }
+}

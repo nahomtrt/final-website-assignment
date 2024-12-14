@@ -1,0 +1,197 @@
+/* Contact Page */
+.contact-page {
+    background-color: #121212; /* Modern dark background */
+    color: #e1e1e1; /* Light text for readability */
+    padding: 60px 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contact header */
+.contact-page h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+/* Form container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contact form elements */
+.contact-form {
+    background-color: #1f1f1f; /* Sleek dark form container */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 25px 50px rgba(0, 229, 255, 0.3);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: scale(1.02); /* Subtle scaling for hover effect */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 25px 70px rgba(0, 229, 255, 0.4);
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Form fields */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #222; /* Subtle contrast for fields */
+    color: #e1e1e1;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00e5ff; /* Futuristic blue accent */
+    background-color: #1a1a1a; /* Enhanced focus contrast */
+}
+
+/* Submit button */
+.contact-form button {
+    background-color: #00e5ff; /* Futuristic blue */
+    color: #121212; /* Contrast for button text */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0096cc; /* Darker hover state */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Contact info section */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsive layout */
+}
+
+.contact-info div {
+    background-color: #1f1f1f; /* Consistent with the form */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 25px 50px rgba(0, 229, 255, 0.3);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* Flexible width with gaps */
+    min-width: 250px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info div:hover {
+    transform: scale(1.05); /* Enhanced hover interactivity */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 25px 70px rgba(0, 229, 255, 0.4);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Navbar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(18, 18, 18, 0.9); /* Frosted glass effect */
+    padding: 15px 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(18, 18, 18, 0.95); /* Slightly darker on hover */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e1e1e1;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1f1f1f; /* Sleek highlight */
+    color: #ffffff;
+}

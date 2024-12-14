@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of Nahom's Car Dashboard UI website.">
+    <title>Home - Nahom's UI</title>
+    <link rel="stylesheet" href="final-wireframe.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Nahom's UI</div>
+        <nav>
+            <ul>
+                <li><a href="final-wireframe.html" class="active">Home</a></li>
+                <li><a href="features-page.html">Features</a></li>
+                <li><a href="about-page.html">About</a></li>
+                <li><a href="contact-page.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Slideshow Section -->
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="car-ui1.png" alt="Image 1">
+                </div>
+                <div class="slide fade">
+                    <img src="car-ui2.png" alt="Image 2">
+                </div>
+                <div class="slide fade">
+                    <img src="car-ui3.jpg" alt="Image 3">
+                </div>
+                <div class="slide fade">
+                    <img src="car-ui4.png" alt="Image 3">
+                </div>
+                <div class="slide fade">
+                    <img src="car-ui5.png" alt="Image 3">
+                </div>
+            </div>
+        
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <span class="icon">🎨</span>
+                    <h3>Custom UI Design</h3>
+                    <p>Tailored dashboard interfaces that match your brand.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">🖱️</span>
+                    <h3>User Experience</h3>
+                    <p>Intuitive interactions for safer driving.</p>
+                </div>
+                <div class="service-card">
+                    <span class="icon">🔄</span>
+                    <h3>Integration</h3>
+                    <p>Seamless connection with vehicle systems.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nahom's UI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        let slideIndex = 0;
+    }
+function showSlides() {
+    let slides = document.querySelectorAll(".slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+function changeSlide(n) {
+    slideIndex += n; // Increment or decrement the slide index by n
+    let slides = document.querySelectorAll(".slide");
+
+    if (slideIndex < 0) {
+        slideIndex = slides.length - 1; // If it's less than 0, go to the last slide
+    } else if (slideIndex >= slides.length) {
+        slideIndex = 0; // If it's beyond the number of slides, go back to the first slide
+    }
+
+    slides.forEach((slide) => (slide.style.display = "none")); // Hide all slides
+    slides[slideIndex].style.display = "block"; // Show the current slide
+}
+
+// Start the slideshow once the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides();
+});
+</script>
